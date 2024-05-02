@@ -164,6 +164,7 @@ Subsidy <- function(p, tacc, tcon, sub, pd) {
     b[5] = p
   }
 
-  print_info(sub, pd)  
-  print_ans(round(solve(A,b),2))
+  #print_info(sub, pd)  
+  #print_ans(round(solve(A,b),2))
+  return(round(solve(A,b),2))
 }
