@@ -35,8 +35,18 @@ b_base <- matrix(data = 0, nrow = 6, ncol = 1)  # 6x1 intercept matrix
 # Printer function
 print_ans <- function(ans_matrix) {
   #print(ans_matrix)
-  print(paste("Account Cost: ", ans_matrix[1,1]))
+  print(paste("Account Cost:   ", ans_matrix[1,1]))
+  print(paste("Account Tax:    ", ans_matrix[2,1]))
+  print(paste("Guest Cost:     ", ans_matrix[3,1]))
+  print(paste("Guest Tax:      ", ans_matrix[4,1]))
+  print(paste("PayDeduct Cost: ", ans_matrix[5,1]))
+  print(paste("PayDeduct Tax:  ", ans_matrix[6,1]))
+  
 
+}
+print_info <- function(sub = 0, pd = 0) {
+  info <- paste(if (sub[1] > 0) {"$"} else {paste(paste(sub[2],"% "), paste(sub[3]," Max")) })
+  print(info)
 }
 
 # Cash and Carry, all cases
@@ -51,13 +61,13 @@ cash_and_carry <- function(p, tacc = 0, tcon, sub = 0, pd = 0) {
 }
 
 # PayrollDeduction, All Cases
-PayrollDeduction <- function(p, tacc, tcon, sub, pd) {
+PayrollDeduction <- function(p, tacc, tcon, sub = 0, pd) {
   # ignoring sub
   ta <- sum(tacc)
   tc <- sum(tcon)
   A <- diag(1,6,6)
   b <- matrix(c(0,0,if(!pd) p else 0,if(!pd) {p*tc} else 0,pd*p,pd*p*ta),6,1)
-  round(solve(A,b),2)
+  print_ans(round(solve(A,b),2))
 }
 
 Subsidy <- function(p, tacc, tcon, sub, pd) {
@@ -98,7 +108,8 @@ Subsidy <- function(p, tacc, tcon, sub, pd) {
   # Case a
   if(sub[1] & !sub[4] & !pd)
   {
-    print("In case a")
+    print("In case a:")
+    print_info(sub,pd)
     A[3,1] = 1;
     A[4,3] = -tc;
     b[3] = p;
@@ -108,7 +119,7 @@ Subsidy <- function(p, tacc, tcon, sub, pd) {
   # Case b
   if(sub[1] & sub[4] & !pd)
   {
-    print("In case b");
+    print("In case b: $, TaxedUpToSubsidy, not PayrollDeduct");
     A[1,1] = 1+ta;
     A[3,1] = 1;
     A[4,3] = -tc;
@@ -119,7 +130,7 @@ Subsidy <- function(p, tacc, tcon, sub, pd) {
   # Case c
   if(!sub[1] & !sub[4] & !pd)
   {
-    print("In case c");
+    print("In case c ");
     A[3,1] = 1;
     A[4,3] = -tc;
     b[1] = min(p*sub[2], sub[3]);
@@ -179,7 +190,7 @@ Subsidy <- function(p, tacc, tcon, sub, pd) {
     b[5] = p
   }
   
-  round(solve(A,b),2)
+  print_ans(round(solve(A,b),2))
 
   
 
