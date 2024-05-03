@@ -1,5 +1,5 @@
 #
-# Subsidy 3 
+# Subsidy  
 #
 # Parameters
 # p :== price of item
@@ -51,24 +51,28 @@ print_info <- function(sub = 0, pd = 0) {
 }
 
 # Cash and Carry, all cases
-cash_and_carry <- function(p, tacc = 0, tcon, sub = 0, pd = 0) {
-  # ignoring sub and pd.
+CashandCarry <- function(p, tacc = 0, tcon, sub = 0, pd = 0) {
   A <- A_base
   b <- b_base
-  b[3,1] <- p               # price
-  b[4,1] <- p * sum(tcon)   # tax
-  #b <- matrix(c(0, 0, p, p * sum(tcon), 0, 0), 6, 1)
-  print_ans(round(solve(A, b), 2))
+  b[3,1] <- p               
+  b[4,1] <- p * sum(tcon)
+  
+  return(round(solve(A,b),2))
 }
 
 # PayrollDeduction, All Cases
 PayrollDeduction <- function(p, tacc, tcon, sub = 0, pd) {
-  # ignoring sub
-  ta <- sum(tacc)
-  tc <- sum(tcon)
-  A <- diag(1,6,6)
-  b <- matrix(c(0,0,if(!pd) p else 0,if(!pd) {p*tc} else 0,pd*p,pd*p*ta),6,1)
-  print_ans(round(solve(A,b),2))
+  A <- A_base
+  b <- b_base
+  if (pd) {
+    b[5,1] <- p;
+    b[6,1] <- p* sum(tacc)
+  } else {
+    b[3,1] <- p;
+    b[4,1] <- p*sum(tcon)
+  }
+
+  return(round(solve(A,b),2))
 }
 
 Subsidy <- function(p, tacc, tcon, sub, pd) {
@@ -164,7 +168,5 @@ Subsidy <- function(p, tacc, tcon, sub, pd) {
     b[5] = p
   }
 
-  #print_info(sub, pd)  
-  #print_ans(round(solve(A,b),2))
   return(round(solve(A,b),2))
 }
