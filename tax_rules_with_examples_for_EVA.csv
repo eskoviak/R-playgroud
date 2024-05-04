@@ -1,0 +1,61 @@
+program type,PD mand,subsidy type,subsidy rule,tax method,acct tax exempt,guest election,paid sub amt,paid sub tax,paid cons amt,paid cons tax,paid PD amt,paid PD tax,tax reason code,state tax,county tax,city tax,district tax,total tax %,sub note,reference,,p,t,s,x1-Sub Amt,x2-Cons Amt,x3-Sub Tax,x4-Cons Tax,Matrix,Sum Cost,Sum Tax,Total
+CashandCarry,#N/A,#N/A,#N/A,#N/A,Account is not Tax Exempt,#N/A,0.00,0.00,277.98,19.46,0.00,0.00,,7.000%,,,,7.000%,,53-1-84591,,,,,,,,,,,,
+CashandCarry,#N/A,#N/A,#N/A,#N/A,Account is Tax Exempt,#N/A,,,,,,,,,,,,0.000%,,,,,Outputs,,,,,,,,,
+CashandCarry,#N/A,#N/A,#N/A,#N/A,Account is not Tax Exempt,#N/A,,,,,,,,,,,,0.000%,,,,,Input Factors (Factors have discreet values),,,,,,,,,
+CashandCarry,#N/A,#N/A,#N/A,#N/A,Account is Tax Exempt,#N/A,,,,,,,,,,,,0.000%,,,,,Input Variables (Continuous values--independant),,,,,,,,,
+PayrollDeduction,No,#N/A,#N/A,TaxedUpToSubsidy,Account is not Tax Exempt,Must be entered,0.00,0.00,0.00,0.00,243.59,21.61,N/A,4.000%,,4.500%,0.375%,8.875%,,246-2-61941,,243.59,21.61,200.00,,,,,,,,
+PayrollDeduction,No,#N/A,#N/A,TaxedUpToSubsidy,Account is not Tax Exempt,consumer paid,0.00,0.00,111.97,7.84,0.00,0.00,N/A,7.000%,,,,7.000%,,715-2-57953,,111.97,7.84,0.00,,,,,,,,
+PayrollDeduction,No,#N/A,#N/A,TaxedUpToSubsidy,Account is Tax Exempt,Must be entered,,,,,,,,,,,,0.000%,,no accts found,,0.00,0.00,0.00,,,,,,,,
+PayrollDeduction,Yes,#N/A,#N/A,TaxedUpToSubsidy,Account is not Tax Exempt,#N/A,0.00,0.00,0.00,0.00,200.89,16.58,N/A,6.250%,,1.000%,1.000%,8.250%,,460-1-69831,,200.89,16.58,0.00,,,,,,,,
+PayrollDeduction,Yes,#N/A,#N/A,TaxedUpToSubsidy,Account is Tax Exempt,#N/A,,,,,,,,,,,,0.000%,,no transactions found,,0.00,0.00,0.00,,,,,,,,
+PayrollDeduction,No,#N/A,#N/A,SubsidyTaxed,Account is not Tax Exempt,Must be entered,0.00,0.00,0.00,0.00,233.99,16.38,N/A,7.000%,,,,7.000%,,716-1-138415,,,,,,,,,,,,
+PayrollDeduction,No,#N/A,#N/A,SubsidyTaxed,Account is not Tax Exempt,consumer paid,0.00,0.00,279.44,16.77,0.00,0.00,N/A,6.000%,,,,6.000%,,516-1-12286,,,,,,,,,,,,
+PayrollDeduction,No,#N/A,#N/A,SubsidyTaxed,Account is Tax Exempt,Must be entered,0.00,0.00,0.00,0.00,208.24,0.00,ALL,7.000%,2.250%,,,9.250%,,890-1-38469,,,,,,,,,,,,
+PayrollDeduction,No,#N/A,#N/A,SubsidyTaxed,Account is Tax Exempt,consumer paid,0.00,0.00,170.48,15.76,0.00,0.00,ALL,7.000%,2.250%,,,9.250%,,890-71-17425,,,,,,,,,,,,
+PayrollDeduction,Yes,#N/A,#N/A,SubsidyTaxed,Account is not Tax Exempt,#N/A,0.00,0.00,0.00,0.00,184.99,18.50,N/A,4.000%,2.000%,4.000%,,10.000%,,401-1-110575,,,,,,,,,,,,
+PayrollDeduction,Yes,#N/A,#N/A,SubsidyTaxed,Account is Tax Exempt,#N/A,0.00,0.00,0.00,0.00,256.48,0.00,ALL,4.000%,1.000%,4.000%,,9.000%,,475-1-111264,,,,,,,,,,,,
+Subsidy,#N/A,dollar,$200 ,SubsidyTaxed,Account is not Tax Exempt,#N/A,200.00,16.50,9.99,0.82,0.00,0.00,N/A,6.250%,,1.000%,1.000%,8.250%,,635-1-153563,,,,,,,,,,,,
+Subsidy,#N/A,dollar,$200 ,SubsidyTaxed,Account is Tax Exempt,#N/A,200.00,0.00,23.99,2.40,0.00,0.00,ALL,6.250%,1.750%,1.000%,1.000%,10.000%,,24-1-102072,,,,,,,,,,,,
+Subsidy,#N/A,dollar,$200 ,TaxedUpToSubsidy,Account is not Tax Exempt,#N/A,200.00,0.00,85.97,29.30,0.00,0.00,N/A,6.000%,1.250%,,3.000%,10.250%,,3-1-118207,,285.97,29.30,200.00,181.41,104.56,18.59,10.72,A1t,285.97,29.31,315.28
+PayrollDeduction,#N/A,dollar,$150 ,TaxedUpToSubsidy,Account is Tax Exempt,#N/A,150.00,0.00,45.49,16.13,0.00,0.00,ALL,6.250%,,1.375%,0.625%,8.250%,,183-1-119555,,195.49,16.13,150.00,150.00,45.94,0.00,3.75,A3,195.94,3.75,199.69
+Subsidy,#N/A,percentage,100% up to $300,SubsidyTaxed,Account is not Tax Exempt,#N/A,285.23,27.62,0.00,0.00,0.00,0.00,N/A,4.225%,,5.454%,,9.679%,,298-1-57304,,,,,,,,,,,,
+Subsidy,#N/A,percentage,100% up to $200,SubsidyTaxed,Account is Tax Exempt,#N/A,149.99,0.00,0.00,0.00,0.00,0.00,ALL,4.300%,1.000%,,,5.300%,,678-1-102178,,,,,,,,,,,,
+Subsidy,#N/A,percentage,100% up to $300,TaxedUpToSubsidy,Account is not Tax Exempt,#N/A,223.99,22.40,0.00,0.00,0.00,0.00,N/A,6.250%,1.750%,1.000%,1.000%,10.000%,,704-1-139343,,223.99,22.40,223.99,223.99,0.00,22.40,0.00,A1t,223.99,22.40,246.39
+Subsidy,#N/A,percentage,50% up to $100,TaxedUpToSubsidy,Account is Tax Exempt,#N/A,89.25,0.00,89.24,4.90,0.00,0.00,ALL,5.000%,0.500%,,,5.500%,,486-1-85502,,178.49,4.90,89.25,89.25,89.24,0.00,4.90,A3,178.49,4.90,183.39
+SubsidyandPayrollDeduction,No,dollar,$125 ,SubsidyTaxed,Account is not Tax Exempt,Must be entered,125.00,9.07,0.00,0.00,21.74,1.57,N/A,5.750%,1.250%,,0.250%,7.250%,,553-1-114944,,,,,,,,,,,,
+SubsidyandPayrollDeduction,No,dollar,$125 ,SubsidyTaxed,Account is not Tax Exempt,consumer paid,125.00,9.06,18.99,1.38,0.00,0.00,N/A,5.750%,1.250%,,0.250%,7.250%,,553-1-115173,,,,,,,,,,,,
+SubsidyandPayrollDeduction,No,dollar,$50 ,SubsidyTaxed,Account is Tax Exempt,Must be entered,50.00,0.00,0.00,0.00,179.49,0.00,ALL,4.500%,0.367%,3.650%,,8.517%,,959-1-78964,,,,,,,,,,,,
+SubsidyandPayrollDeduction,No,dollar,$165 ,SubsidyTaxed,Account is Tax Exempt,consumer paid,165.00,0.00,26.24,2.26,0.00,0.00,ALL,4.500%,,4.125%,,8.625%,,867-2-65479,,,,,,,,,,,,
+SubsidyandPayrollDeduction,Yes,dollar,$100 ,SubsidyTaxed,Account is not Tax Exempt,#N/A,100.00,9.00,0.00,0.00,134.99,12.15,N/A,4.000%,1.000%,4.000%,,9.000%,,475-1-102242,,,,,,,,,,,,
+SubsidyandPayrollDeduction,Yes,dollar,$100 ,SubsidyTaxed,Account is Tax Exempt,#N/A,100.00,0.00,0.00,0.00,34.99,0.00,ALL,5.750%,1.250%,,0.250%,7.250%,,553-1-121014,,,,,,,,,,,,
+SubsidyandPayrollDeduction,No,dollar,$125 ,TaxedUpToSubsidy,Account is not Tax Exempt,Must be entered,125.00,0.00,0.00,0.00,84.99,15.21,N/A,4.850%,0.850%,1.000%,0.550%,7.250%,,962-1-61190,,209.99,15.21,125.00,116.56,93.43,8.44,6.77,A1,209.99,15.21,225.20
+SubsidyandPayrollDeduction,No,dollar,$125 ,TaxedUpToSubsidy,Account is not Tax Exempt,consumer paid,125.00,0.00,81.24,21.13,0.00,0.00,N/A,6.000%,1.250%,,3.000%,10.250%,,3-2-114309,,206.24,21.13,125.00,113.38,92.86,11.62,9.51,A1,206.24,21.13,227.37
+SubsidyandPayrollDeduction,No,dollar,$150 ,TaxedUpToSubsidy,Account is Tax Exempt,Must be entered,150.00,0.00,0.00,0.00,26.08,0.00,ALL,4.000%,3.000%,,1.000%,8.000%,,230-72-32830,,176.08,0.00,150.00,150.00,26.08,0.00,0.00,A3,176.08,0.00,176.08
+SubsidyandPayrollDeduction,No,dollar,$150 ,TaxedUpToSubsidy,Account is Tax Exempt,consumer paid,150.00,0.00,40.89,15.28,0.00,0.00,ALL,4.000%,3.000%,,1.000%,8.000%,,230-72-32840,,190.89,15.28,150.00,150.00,40.89,0.00,3.27,A3,190.89,3.27,194.16
+SubsidyandPayrollDeduction,Yes,dollar,$200 ,TaxedUpToSubsidy,Account is not Tax Exempt,#N/A,200.00,0.00,0.00,0.00,21.39,15.50,N/A,7.000%,,,,7.000%,,714-1-96575,,221.39,15.50,200.00,186.91,34.48,13.09,2.41,A1,221.39,15.50,236.89
+SubsidyandPayrollDeduction,Yes,dollar,$135 ,TaxedUpToSubsidy,Account is Tax Exempt,#N/A,135.00,0.00,0.00,0.00,36.59,0.00,GA,4.000%,2.750%,,1.000%,7.750%,,230-71-27283,,171.59,0.00,135.00,135.00,36.59,0.00,0.00,A1,171.59,0.00,171.59
+SubsidyandPayrollDeduction,No,percentage,100% up to $300,SubsidyTaxed,Account is not Tax Exempt,Must be entered,224.09,22.97,0.00,0.00,0.00,0.00,N/A,6.250%,,1.000%,1.000%,8.250%,100% sub,18-71-25914,,,,,,,,,,,,
+SubsidyandPayrollDeduction,No,percentage,50% up to $100,SubsidyTaxed,Account is Tax Exempt,Must be entered,87.12,0.00,87.12,6.10,0.00,0.00,ALL,7.000%,,,,7.000%,50% sub,579-1-45432,,,,,,,,,,,,
+SubsidyandPayrollDeduction,Yes,percentage,100% up to $300,SubsidyTaxed,Account is not Tax Exempt,#N/A,229.99,20.70,0.00,0.00,0.00,0.00,N/A,4.000%,1.000%,4.000%,,9.000%,100% sub,475-1-118875,,,,,,,,,,,,
+SubsidyandPayrollDeduction,Yes,percentage,100% up to $300,SubsidyTaxed,Account is Tax Exempt,#N/A,176.29,0.00,0.00,0.00,0.00,0.00,TX,6.250%,,1.000%,1.000%,8.250%,100% sub,643-1-124817,,,,,,,,,,,,
+SubsidyandPayrollDeduction,No,percentage,50% up to $125,TaxedUpToSubsidy,Account is not Tax Exempt,Must be entered,112.00,8.92,0.00,0.00,111.99,8.91,N/A,2.900%,0.500%,3.460%,1.100%,7.960%,50% sub,127-1-98549,,223.99,17.83,112.00,103.74,120.25,8.26,9.57,A1t,223.99,17.83,241.82
+SubsidyandPayrollDeduction,No,percentage,50% up to $125,TaxedUpToSubsidy,Account is not Tax Exempt,consumer paid,108.00,8.91,107.99,8.91,0.00,0.00,N/A,6.250%,0.500%,1.000%,0.500%,8.250%,50% sub,993-1-48650,,215.99,17.82,108.00,99.77,116.22,8.23,9.59,A1,215.99,17.82,233.81
+SubsidyandPayrollDeduction,No,percentage,100% up to $300,TaxedUpToSubsidy,Account is Tax Exempt,Must be entered,240.69,0.00,0.00,0.00,0.00,0.00,ALL,4.000%,4.000%,,,8.000%,100% sub,101-1-119598,,240.69,0.00,240.69,240.69,0.00,0.00,0.00,A4,240.69,0.00,240.69
+SubsidyandPayrollDeduction,Yes,percentage,50% up to $300,TaxedUpToSubsidy,Account is not Tax Exempt,#N/A,97.75,6.84,0.00,0.00,97.74,6.84,N/A,7.000%,,,,7.000%,50% sub,741-1-89637,,195.49,13.68,97.75,91.36,104.13,6.39,7.29,A1,195.49,13.68,209.17
+SubsidyandPayrollDeduction,Yes,percentage,50% up to $75,TaxedUpToSubsidy,Account is Tax Exempt,#N/A,68.00,0.00,35.98,2.16,67.99,0.00,ALL,6.000%,,,,6.000%,50% sub,513-1-107431,,171.97,2.16,85.99,135.99,35.98,0.00,2.16,A1,171.97,2.16,174.13
+SubsidywithPcard,#N/A,dollar,$250 ,SubsidyTaxed,Account is not Tax Exempt,#N/A,250.00,20.93,29.96,2.51,0.00,0.00,N/A,6.000%,1.250%,0.000%,1.125%,8.375%,,231-74-309,,,,,,,,,,,,
+SubsidywithPcard,#N/A,dollar,$200 ,SubsidyTaxed,Account is Tax Exempt,#N/A,200.00,0.00,77.48,4.65,0.00,0.00,ALL,6.000%,,,,6.000%,,231-1-168589,,,,,,,,,,,,
+SubsidywithPcard,#N/A,dollar,$250 ,TaxedUpToSubsidy,Account is not Tax Exempt,#N/A,233.99,16.01,0.00,5.03,0.00,0.00,N/A,6.000%,1.250%,,1.750%,9.000%,,835-1-105402,,233.99,21.04,250.00,229.37,4.62,20.63,0.41,A1,233.99,21.04,255.03
+SubsidywithPcard,#N/A,dollar,$200 ,TaxedUpToSubsidy,Account is Tax Exempt,#N/A,127.49,0.00,0.00,0.00,0.00,0.00,ALL,6.000%,,,,6.000%,,30-72-13186,,127.49,0.00,200.00,127.49,0.00,0.00,0.00,A4,127.49,0.00,127.49
+SubsidywithPcard,#N/A,percentage,,SubsidyTaxed,Account is not Tax Exempt,#N/A,,,,,,,,,,,,0.000%,???,no transactions found,,,,,,,,,,,,
+SubsidywithPcard,#N/A,percentage,100% up to $300,SubsidyTaxed,Account is Tax Exempt,#N/A,183.99,0.00,0.00,0.00,0.00,0.00,ALL,6.000%,1.000%,,,7.000%,???,606-1-64760,,,,,,,,,,,,
+SubsidywithPcard,#N/A,percentage,100% up to $300,TaxedUpToSubsidy,Account is not Tax Exempt,#N/A,117.37,7.63,0.00,0.00,0.00,0.00,N/A,6.000%,0.500%,,,6.500%,???,118-1-101698,,117.37,7.63,117.37,117.37,7.63,0.00,0.00,A2,125.00,0.00,125.00
+SubsidywithPcard,#N/A,percentage,100% up to $300,TaxedUpToSubsidy,Account is Tax Exempt,#N/A,183.99,0.00,0.00,0.00,0.00,0.00,ALL,,,,,0.000%,???,402-1-69715,,183.99,0.00,183.99,183.99,0.00,0.00,0.00,A4,183.99,0.00,183.99
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Subsidy,#N/A,dollar,,SubsidyTaxed,Account is Tax Exempt,state exempt,158.39,9.51,0.00,0.00,0.00,0.00,15,4.450%,,1.500%,4.500%,10.450%,,759-1-93320,,158.39,mixed,200.00,158.39,0.00,9.50,0.00,A0t,,,
+,,,,,,state exempt,200.00,12.00,19.99,2.09,0.00,0.00,15,4.450%,,1.500%,4.500%,10.450%,,759-1-91576,,219.99,mixed,200.00,200.00,19.99,12.00,2.10,A0t,,,
